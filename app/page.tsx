@@ -152,7 +152,7 @@ export default function Home() {
             <br />
             Stack is Next.js, TypeScript, Supabase, Claude Code.
             <br />
-            11th grade. Applying to nFactorial Incubator 2026.
+            Currently applying for ML and AI engineering programs.
           </p>
         </section>
       </FadeInSection>
@@ -205,7 +205,7 @@ export default function Home() {
               <div>
                 <span className="text-[#ededed]">AzamatAI</span>
                 <span className="text-[#6b6b6b]">
-                  . Bilingual RU/KZ AI assistant. Built in under 24 hours.
+                  . Bilingual Russian and Kazakh AI assistant. Built in under 24 hours.
                 </span>
               </div>
               <div className="text-xs text-zinc-500 mt-1 max-h-0 overflow-hidden group-hover:max-h-8 transition-all duration-300">
@@ -234,7 +234,7 @@ export default function Home() {
         <section>
           <p className="text-xs text-zinc-500 lowercase mb-3">wins</p>
           <ul className="text-sm leading-relaxed space-y-2">
-            <li>Almaty Marathon, 4:31, age 16.</li>
+            <li>Almaty Marathon. 4:31 at 16.</li>
             <li>15 Peaks of Almaty, all three levels in 12 months.</li>
             <li>EcoSolutions Hackathon 2026, 2nd place.</li>
             <li>
@@ -255,7 +255,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {galleryItems.map((n, i) => (
             <FadeInSection key={n} delay={i * 100}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm ring-1 ring-zinc-800/80 transition-all duration-500 hover:ring-zinc-600 hover:scale-[1.02]">
+              <div className="gallery-item relative aspect-[4/5] overflow-hidden rounded-sm ring-1 ring-zinc-800/80 transition-all duration-500 hover:ring-zinc-600 hover:scale-[1.02]">
                 <Image
                   src={`/gallery/${n}.jpg`}
                   alt=""
