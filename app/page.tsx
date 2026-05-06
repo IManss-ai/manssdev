@@ -5,7 +5,9 @@ export default function Home() {
   const linkClass =
     "underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-300 hover:text-white transition-colors";
 
-  const Separator = () => <div className="h-px bg-zinc-800 my-12" />;
+  const Separator = () => <div className="h-px bg-zinc-800/60 my-8" />;
+
+  const galleryItems = ["01", "02", "03", "04", "05", "06"];
 
   return (
     <main className="max-w-[640px] mx-auto px-6 py-20 md:py-28">
@@ -15,14 +17,18 @@ export default function Home() {
           <Image
             src="/avatar.jpg"
             alt="Mansur Zhiger"
-            width={48}
-            height={48}
-            className="rounded-full object-cover flex-shrink-0"
+            width={72}
+            height={72}
+            className="rounded-full object-cover ring-1 ring-zinc-800 flex-shrink-0"
             priority
           />
           <div className="flex flex-col">
-            <h1 className="text-base font-medium">Mansur Zhiger</h1>
-            <p className="text-sm text-[#6b6b6b] mt-1">Indie dev. Almaty. 17.</p>
+            <h1 className="text-lg font-medium text-zinc-100">Mansur Zhiger</h1>
+            <p className="text-sm text-zinc-500 mt-1">
+              Indie dev
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mx-1.5 align-middle status-pulse" />
+              Almaty. 17.
+            </p>
           </div>
         </div>
       </section>
@@ -162,7 +168,7 @@ export default function Home() {
             something.
           </p>
           <ul className="text-sm leading-relaxed space-y-2">
-            <li className="group">
+            <li className="group py-1 -mx-2 px-2 rounded-sm transition-colors hover:bg-zinc-900/50">
               <div>
                 <span className="text-[#ededed]">ShipReady</span>
                 <span className="text-[#6b6b6b]">
@@ -173,7 +179,7 @@ export default function Home() {
                 Next.js, TypeScript, Supabase. 80 waitlist signups.
               </div>
             </li>
-            <li className="group">
+            <li className="group py-1 -mx-2 px-2 rounded-sm transition-colors hover:bg-zinc-900/50">
               <div>
                 <span className="text-[#ededed]">SafeBiz KZ</span>
                 <span className="text-[#6b6b6b]">
@@ -184,7 +190,7 @@ export default function Home() {
                 Next.js, Supabase, Recharts. 120 organic signups.
               </div>
             </li>
-            <li className="group">
+            <li className="group py-1 -mx-2 px-2 rounded-sm transition-colors hover:bg-zinc-900/50">
               <div>
                 <span className="text-[#ededed]">EcoAlmaty</span>
                 <span className="text-[#6b6b6b]">
@@ -195,7 +201,7 @@ export default function Home() {
                 Next.js, Tailwind, Anthropic API. 2nd of 30+ teams.
               </div>
             </li>
-            <li className="group">
+            <li className="group py-1 -mx-2 px-2 rounded-sm transition-colors hover:bg-zinc-900/50">
               <div>
                 <span className="text-[#ededed]">AzamatAI</span>
                 <span className="text-[#6b6b6b]">
@@ -206,7 +212,7 @@ export default function Home() {
                 Next.js, Vercel. Built in 24 hours.
               </div>
             </li>
-            <li className="group">
+            <li className="group py-1 -mx-2 px-2 rounded-sm transition-colors hover:bg-zinc-900/50">
               <div>
                 <span className="text-[#ededed]">CodeVault</span>
                 <span className="text-[#6b6b6b]">
@@ -242,32 +248,31 @@ export default function Home() {
       <Separator />
 
       {/* Field */}
-      <FadeInSection delay={480}>
-        <section>
+      <section>
+        <FadeInSection delay={0}>
           <p className="text-xs text-zinc-500 lowercase mb-3">field</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {["01", "02", "03", "04", "05", "06"].map((n) => (
-              <div
-                key={n}
-                className="relative aspect-square overflow-hidden rounded-sm transition-all duration-300 hover:scale-105 hover:brightness-110"
-              >
+        </FadeInSection>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {galleryItems.map((n, i) => (
+            <FadeInSection key={n} delay={i * 100}>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm ring-1 ring-zinc-800/80 transition-all duration-500 hover:ring-zinc-600 hover:scale-[1.02]">
                 <Image
                   src={`/gallery/${n}.jpg`}
                   alt=""
                   fill
-                  sizes="(max-width: 640px) 50vw, 213px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  className="object-cover transition-transform duration-700 hover:scale-110"
                 />
               </div>
-            ))}
-          </div>
-        </section>
-      </FadeInSection>
+            </FadeInSection>
+          ))}
+        </div>
+      </section>
 
       <Separator />
 
       {/* Resume */}
-      <FadeInSection delay={480}>
+      <FadeInSection delay={0}>
         <section>
           <p className="text-xs text-zinc-500 lowercase mb-3">resume</p>
           <p className="text-sm leading-relaxed">

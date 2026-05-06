@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Resume — Mansur Zhiger",
+  title: "Resume -- Mansur Zhiger",
   description: "Indie dev in Almaty. 17.",
 };
 
@@ -9,28 +9,34 @@ export default function Resume() {
   const linkClass =
     "underline underline-offset-4 decoration-zinc-700 hover:decoration-zinc-300 hover:text-white transition-colors";
 
+  const Separator = () => <div className="h-px bg-zinc-800/60 my-8" />;
+
   return (
     <main className="max-w-[640px] mx-auto px-6 py-20 md:py-28">
       {/* Back link */}
-      <div className="mb-12">
+      <div className="mb-8">
         <Link href="/" className={linkClass + " text-sm text-[#6b6b6b]"}>
           back
         </Link>
       </div>
 
-      <h1 className="text-base font-medium mb-1">Mansur Zhiger</h1>
-      <p className="text-sm text-[#6b6b6b]">Almaty, Kazakhstan</p>
+      <h1 className="text-lg font-medium text-zinc-100 mb-1">Mansur Zhiger</h1>
+      <p className="text-sm text-zinc-500">Almaty, Kazakhstan</p>
+
+      <Separator />
 
       {/* Education */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">education</p>
         <p className="text-sm leading-relaxed">
           Gymnasium 140, Almaty. 11th grade. Graduating 2026.
         </p>
       </section>
 
+      <Separator />
+
       {/* Experience */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">experience</p>
         <p className="text-sm leading-relaxed">
           Indie developer, 2024-present. Almaty.
@@ -41,8 +47,10 @@ export default function Resume() {
         </p>
       </section>
 
+      <Separator />
+
       {/* Projects */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">projects</p>
         <ul className="text-sm leading-relaxed space-y-4">
           <li>
@@ -83,8 +91,10 @@ export default function Resume() {
         </ul>
       </section>
 
+      <Separator />
+
       {/* Stack */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">stack</p>
         <p className="text-sm leading-relaxed text-[#6b6b6b]">
           Next.js, TypeScript, Tailwind, Supabase, Railway, Vercel. Claude Code
@@ -93,8 +103,10 @@ export default function Resume() {
         </p>
       </section>
 
+      <Separator />
+
       {/* Athletic */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">athletic</p>
         <ul className="text-sm leading-relaxed space-y-2">
           <li>Almaty Marathon, 42.2km, 4:31, age 16.</li>
@@ -106,8 +118,10 @@ export default function Resume() {
         </ul>
       </section>
 
+      <Separator />
+
       {/* Writing */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">writing</p>
         <p className="text-sm leading-relaxed text-[#6b6b6b]">
           &ldquo;ЗОЖ легко и просто,&rdquo; 60+ page health book.
@@ -115,16 +129,20 @@ export default function Resume() {
         </p>
       </section>
 
+      <Separator />
+
       {/* Languages */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">languages</p>
         <p className="text-sm leading-relaxed text-[#6b6b6b]">
           Russian (native). Kazakh (fluent). English (working).
         </p>
       </section>
 
+      <Separator />
+
       {/* Contact */}
-      <section className="mt-16">
+      <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">contact</p>
         <p className="text-sm leading-relaxed">
           <a href="mailto:manssjones@gmail.com" className={linkClass}>
