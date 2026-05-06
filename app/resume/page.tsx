@@ -1,3 +1,5 @@
+// TODO: wire up language context when Russian translation is ready.
+// Resume text intentionally stays English-only for now (PDF is English).
 import Link from "next/link";
 
 export const metadata = {
