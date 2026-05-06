@@ -234,12 +234,8 @@ export default function Home() {
         <section>
           <p className="text-xs text-zinc-500 lowercase mb-3">{t.sections.resume}</p>
           <p className="text-sm leading-relaxed">
-            <a href="/resume" className={linkClass}>
-              {t.resume.view}
-            </a>
-            {" \u00b7 "}
             <a href="/resume.pdf" className={linkClass}>
-              {t.resume.download}
+              {t.resume.pdf}
             </a>
           </p>
         </section>

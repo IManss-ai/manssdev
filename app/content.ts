@@ -39,7 +39,7 @@ export const content = {
       "\u201c\u0417\u041e\u0416 \u043b\u0435\u0433\u043a\u043e \u0438 \u043f\u0440\u043e\u0441\u0442\u043e\u201d health book, ~1,200 copies sold.",
       "$3,000+ from 8+ paying clients in four months.",
     ],
-    resume: { view: "View live", download: "Download PDF" },
+    resume: { pdf: "resume.pdf" },
     closer: "11th grade. Shipping anyway.",
   },
   ru: {
@@ -85,7 +85,7 @@ export const content = {
       "\u201c\u0417\u041e\u0416 \u043b\u0435\u0433\u043a\u043e \u0438 \u043f\u0440\u043e\u0441\u0442\u043e\u201d health book, ~1,200 copies sold.",
       "$3,000+ from 8+ paying clients in four months.",
     ],
-    resume: { view: "View live", download: "Download PDF" },
+    resume: { pdf: "resume.pdf" },
     closer: "11th grade. Shipping anyway.",
   },
 } as const;
