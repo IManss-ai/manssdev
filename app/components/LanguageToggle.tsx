@@ -22,7 +22,7 @@ export default function LanguageToggle() {
 
   return (
     <div
-      className={`fixed top-4 right-4 sm:top-6 sm:right-6 z-50 text-xs font-mono transition-opacity duration-300 ${
+      className={`text-xs font-mono transition-opacity duration-300 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >

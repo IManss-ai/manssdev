@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import Providers from "./components/Providers";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "cyrillic"],
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {
@@ -24,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistMono.variable}`}>
-      <body className="font-mono antialiased bg-[#0a0a0a] text-[#ededed]">
+    <html lang="en" className={`${inter.variable} ${geistMono.variable} ${caveat.variable}`}>
+      <body className="font-sans antialiased bg-[#0a0a0a] text-[#ededed]">
         <Providers>{children}</Providers>
       </body>
     </html>

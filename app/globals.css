@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-caveat: var(--font-caveat);
 }
 
 body {
@@ -30,15 +32,10 @@ body {
   animation: statusPulse 2s ease-in-out infinite;
 }
 
-/* Touch feedback: scale on tap for gallery items. Works on iOS and Android.
-   On desktop, hover:scale-[1.02] from Tailwind handles the interaction.
-   The parent's transition-all duration-500 animates this change. */
 .gallery-item:active {
   transform: scale(1.05);
 }
 
-/* Reduced motion: disable all fade-section transitions and snap to visible.
-   Animations still fire for users who have NOT set this preference. */
 @media (prefers-reduced-motion: reduce) {
   .fade-section {
     transition: none !important;
