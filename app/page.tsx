@@ -335,7 +335,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Hero Card */}
           <div className="lg:col-span-5">
-            <FadeInSection delay={0}>
+            <FadeInSection delay={0} className="h-full">
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.hero_intro}
@@ -376,7 +376,7 @@ export default function Home() {
 
           {/* Photo Card */}
           <div className="lg:col-span-4 lg:min-h-[500px]" ref={photoRef}>
-            <FadeInSection delay={100}>
+            <FadeInSection delay={100} className="h-full">
               <div className={`${CARD} !p-0 overflow-hidden h-full`}>
                 <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full min-h-[400px] overflow-hidden rounded-2xl">
                   <Image
@@ -423,7 +423,7 @@ export default function Home() {
 
           {/* Numbers Card */}
           <div className="lg:col-span-3">
-            <FadeInSection delay={200}>
+            <FadeInSection delay={200} className="h-full">
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.numbers_label}
