@@ -121,7 +121,7 @@ function BoldText({ text, bolds }: { text: string; bolds: string[] }) {
 function HeroName({ name }: { name: string }) {
   const chars = name.split("");
   return (
-    <h1 className="text-5xl md:text-6xl font-mono lowercase mt-4 text-zinc-100">
+    <h1 className="text-4xl lg:text-5xl font-mono lowercase mt-4 text-zinc-100 whitespace-nowrap">
       {chars.map((char, i) => (
         <motion.span
           key={i}
@@ -334,7 +334,7 @@ export default function Home() {
         {/* Row 1: Hero + Photo + Numbers */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Hero Card */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <FadeInSection delay={0}>
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
@@ -422,7 +422,7 @@ export default function Home() {
           </div>
 
           {/* Numbers Card */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <FadeInSection delay={200}>
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
@@ -455,8 +455,9 @@ export default function Home() {
         </div>
 
         {/* Row 2: Life Story + Projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4">
           {/* Life Story Card */}
+          <div className="lg:col-span-5">
           <FadeInSection delay={300}>
             <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
@@ -471,8 +472,10 @@ export default function Home() {
               </div>
             </CardHover>
           </FadeInSection>
+          </div>
 
           {/* Projects Card */}
+          <div className="lg:col-span-7">
           <FadeInSection delay={400}>
             <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="flex justify-between items-center">
@@ -494,6 +497,7 @@ export default function Home() {
               </div>
             </CardHover>
           </FadeInSection>
+          </div>
         </div>
 
         {/* Row 3: Gallery */}
