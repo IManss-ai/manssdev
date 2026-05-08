@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, useInView, useScroll, useTransform, AnimatePresence } from "motion/react";
+import { motion, useInView, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from "motion/react";
 import { ArrowUpRight, Mail } from "lucide-react";
 import FadeInSection from "./components/FadeInSection";
 import LanguageToggle from "./components/LanguageToggle";
@@ -290,6 +290,27 @@ export default function Home() {
   const photoRef = useRef<HTMLDivElement>(null);
   const photoInView = useInView(photoRef, { once: true, amount: 0.3 });
 
+  // Photo card hover + tilt
+  const [photoHovered, setPhotoHovered] = useState(false);
+  const rawMouseX = useMotionValue(0.5);
+  const rawMouseY = useMotionValue(0.5);
+  const mouseXSpring = useSpring(rawMouseX, { stiffness: 120, damping: 20 });
+  const mouseYSpring = useSpring(rawMouseY, { stiffness: 120, damping: 20 });
+  const tiltY = useTransform(mouseXSpring, [0, 1], [-6, 6]);
+  const tiltX = useTransform(mouseYSpring, [0, 1], [6, -6]);
+
+  const handlePhotoMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    rawMouseX.set((e.clientX - rect.left) / rect.width);
+    rawMouseY.set((e.clientY - rect.top) / rect.height);
+  };
+
+  const handlePhotoMouseLeave = () => {
+    setPhotoHovered(false);
+    rawMouseX.set(0.5);
+    rawMouseY.set(0.5);
+  };
+
   // Hero sequence delays (name reveal ~400ms, then callout, then body)
   const nameLength = t.hero.name.length;
   const nameDuration = nameLength * 0.03 + 0.05;
@@ -376,19 +397,62 @@ export default function Home() {
 
           {/* Photo Card */}
           <div className="lg:col-span-4 lg:min-h-[500px]" ref={photoRef}>
-            <FadeInSection delay={100} className="h-full">
-              <div className={`${CARD} !p-0 overflow-hidden h-full`}>
-                <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full min-h-[400px] overflow-hidden rounded-2xl">
-                  <Image
-                    src="/gallery/01.jpg"
-                    alt="Mansur Zhiger"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
-                    priority
+            <FadeInSection delay={100} className="lg:h-full">
+              <motion.div
+                className={`${CARD} !p-0 overflow-hidden h-full`}
+                style={{ perspective: "900px" }}
+                onHoverStart={() => setPhotoHovered(true)}
+                onMouseMove={handlePhotoMouseMove}
+                onMouseLeave={handlePhotoMouseLeave}
+              >
+                <motion.div
+                  className="relative aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px] overflow-hidden rounded-2xl"
+                  style={{ rotateX: tiltX, rotateY: tiltY }}
+                >
+                  {/* Image with zoom on hover */}
+                  <motion.div
+                    className="absolute inset-0"
+                    animate={{ scale: photoHovered ? 1.07 : 1 }}
+                    transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  >
+                    <Image
+                      src="/gallery/01.jpg"
+                      alt="Mansur Zhiger"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover object-top"
+                      priority
+                    />
+                  </motion.div>
+
+                  {/* Base dark gradient always visible */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent pointer-events-none" />
+
+                  {/* Cool indigo tint — default */}
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(135deg, rgba(49,46,129,0.28) 0%, rgba(30,58,138,0.12) 50%, transparent 100%)" }}
+                    animate={{ opacity: photoHovered ? 0 : 1 }}
+                    transition={{ duration: 0.55 }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  {/* Animated handwritten annotations */}
+
+                  {/* Warm emerald tint — hover */}
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(315deg, rgba(6,78,59,0.32) 0%, rgba(17,94,89,0.14) 50%, transparent 100%)" }}
+                    animate={{ opacity: photoHovered ? 1 : 0 }}
+                    transition={{ duration: 0.55 }}
+                  />
+
+                  {/* Shimmer line on hover */}
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.05) 50%, transparent 60%)" }}
+                    animate={{ opacity: photoHovered ? 1 : 0, x: photoHovered ? "100%" : "-100%" }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                  />
+
+                  {/* Handwritten annotations */}
                   <motion.span
                     className="absolute top-6 left-6 text-red-400 text-2xl select-none"
                     style={{ fontFamily: "var(--font-caveat)", textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
@@ -416,8 +480,8 @@ export default function Home() {
                   >
                     {t.photo_annotations.runner}
                   </motion.span>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </FadeInSection>
           </div>
 
