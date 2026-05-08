@@ -455,10 +455,10 @@ export default function Home() {
         </div>
 
         {/* Row 2: Life Story + Projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-4 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
           {/* Life Story Card */}
-          <FadeInSection delay={300}>
-            <CardHover className={`${CARD} ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
+          <FadeInSection delay={300} className="h-full">
+            <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                 {t.life_story_label}
               </div>
@@ -473,8 +473,8 @@ export default function Home() {
           </FadeInSection>
 
           {/* Projects Card */}
-          <FadeInSection delay={400}>
-            <CardHover className={`${CARD} ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
+          <FadeInSection delay={400} className="h-full">
+            <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="flex justify-between items-center">
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.projects_label}
