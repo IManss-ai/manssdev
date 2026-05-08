@@ -121,7 +121,7 @@ function BoldText({ text, bolds }: { text: string; bolds: string[] }) {
 function HeroName({ name }: { name: string }) {
   const chars = name.split("");
   return (
-    <h1 className="text-4xl lg:text-5xl font-mono lowercase mt-4 text-zinc-100 whitespace-nowrap">
+    <h1 className="font-mono lowercase mt-4 text-zinc-100" style={{ fontSize: "clamp(1.75rem, 3.8vw, 3rem)" }}>
       {chars.map((char, i) => (
         <motion.span
           key={i}
@@ -334,7 +334,7 @@ export default function Home() {
         {/* Row 1: Hero + Photo + Numbers */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Hero Card */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <FadeInSection delay={0}>
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
@@ -422,13 +422,13 @@ export default function Home() {
           </div>
 
           {/* Numbers Card */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <FadeInSection delay={200}>
               <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.numbers_label}
                 </div>
-                <div className="space-y-6 mt-6">
+                <div className="space-y-4 mt-6">
                   {t.numbers.map((metric, i) => (
                     <Counter
                       key={i}
@@ -438,7 +438,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <div className="h-px bg-zinc-800 my-6" />
+                <div className="h-px bg-zinc-800 my-4" />
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.recognized_label}
                 </div>
@@ -455,11 +455,10 @@ export default function Home() {
         </div>
 
         {/* Row 2: Life Story + Projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-4 mt-4">
           {/* Life Story Card */}
-          <div className="lg:col-span-5">
           <FadeInSection delay={300}>
-            <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
+            <CardHover className={`${CARD} ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                 {t.life_story_label}
               </div>
@@ -472,12 +471,10 @@ export default function Home() {
               </div>
             </CardHover>
           </FadeInSection>
-          </div>
 
           {/* Projects Card */}
-          <div className="lg:col-span-7">
           <FadeInSection delay={400}>
-            <CardHover className={`${CARD} h-full ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
+            <CardHover className={`${CARD} ring-zinc-900 hover:ring-zinc-800 transition-[ring-color] duration-300`}>
               <div className="flex justify-between items-center">
                 <div className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.projects_label}
@@ -497,7 +494,6 @@ export default function Home() {
               </div>
             </CardHover>
           </FadeInSection>
-          </div>
         </div>
 
         {/* Row 3: Gallery */}
