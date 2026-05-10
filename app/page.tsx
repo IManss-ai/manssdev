@@ -578,6 +578,8 @@ export default function Home() {
                         alt=""
                         fill
                         sizes="(max-width: 1024px) 50vw, 16vw"
+                        quality={85}
+                        priority={i < 2}
                         className="object-cover transition-transform duration-700 hover:scale-110"
                       />
                     </div>
