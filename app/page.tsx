@@ -121,7 +121,7 @@ function BoldText({ text, bolds }: { text: string; bolds: string[] }) {
 function HeroName({ name }: { name: string }) {
   const chars = name.split("");
   return (
-    <h1 className="font-mono lowercase mt-4 text-zinc-100" style={{ fontSize: "clamp(1.75rem, 3.8vw, 3rem)" }}>
+    <h1 className="font-mono uppercase mt-4 text-zinc-100" style={{ fontSize: "clamp(1.75rem, 3.8vw, 3rem)" }}>
       {chars.map((char, i) => (
         <motion.span
           key={i}
@@ -142,14 +142,16 @@ function ProjectRow({
   project,
   isLast,
 }: {
-  project: { index: string; name: string; status: string | null; description: string };
+  project: { index: string; name: string; status: string | null; description: string; href?: string | null };
   isLast: boolean;
 }) {
   const [hovered, setHovered] = useState(false);
+  const Tag = project.href ? motion.a : motion.div;
 
   return (
-    <motion.div
-      className={`flex justify-between items-start py-4 rounded-lg px-2 -mx-2 cursor-default ${
+    <Tag
+      {...(project.href ? { href: project.href, target: "_blank", rel: "noopener noreferrer" } : {})}
+      className={`flex justify-between items-start py-4 rounded-lg px-2 -mx-2 ${project.href ? "cursor-pointer" : "cursor-default"} ${
         !isLast ? "border-b border-zinc-900" : ""
       }`}
       onHoverStart={() => setHovered(true)}
@@ -211,7 +213,7 @@ function ProjectRow({
           <ArrowUpRight size={16} />
         </motion.span>
       </div>
-    </motion.div>
+    </Tag>
   );
 }
 
@@ -361,7 +363,7 @@ export default function Home() {
                 <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
                   {t.hero_intro}
                 </span>
-                <HeroName name={t.hero.name.toLowerCase()} />
+                <HeroName name={t.hero.name.toUpperCase()} />
                 <motion.div
                   className="inline-block bg-zinc-900 px-3 py-1.5 rounded mt-6 text-zinc-200"
                   initial={{ opacity: 0, y: 8 }}
