@@ -408,7 +408,7 @@ export default function Home() {
                 onMouseLeave={handlePhotoMouseLeave}
               >
                 <motion.div
-                  className="relative aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px] overflow-hidden rounded-2xl"
+                  className="relative aspect-[3/4] lg:aspect-auto lg:h-full lg:min-h-[400px] overflow-hidden rounded-2xl"
                   style={{ rotateX: tiltX, rotateY: tiltY }}
                 >
                   {/* Image with zoom on hover */}
@@ -422,7 +422,7 @@ export default function Home() {
                       alt="Mansur Zhiger"
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover object-top"
+                      className="object-cover object-center"
                       priority
                     />
                   </motion.div>
