@@ -48,7 +48,7 @@ export const content = {
     hero_callout: "Couldn't find the right app. Built it myself. Five times now.",
     hero_body: "17. From Uralsk, now Almaty. Got into coding because I wanted to learn Arabic and nothing worked \u2014 so I built my own app. That was 1.5 years ago. Five products since, Telegram bots for 8+ businesses, $3,000+ earned, two hackathon placements. Up at 4am, pray, run, then code from 2pm after school. Right now building Restok \u2014 smart grocery automation that tracks your fridge and auto-orders through Kaspi. Applying for ML and AI Engineering programs.",
     numbers: [
-      { value: "1,200+", label: "COPIES OF ZOZh BOOK SOLD" },
+      { value: "1,200+", label: "COPIES OF HEALTH BOOK SOLD" },
       { value: "$3,000+", label: "FROM 8+ PAYING CLIENTS" },
       { value: "80", label: "SHIPREADY WAITLIST SIGNUPS" },
       { value: "120", label: "SAFEBIZ KZ REGISTRATIONS" },
@@ -132,7 +132,7 @@ export const content = {
     hero_callout: "Не нашёл нужного приложения — сделал сам. Уже пять раз.",
     hero_body: "17 лет. Из Уральска, теперь в Алматы. Начал кодить потому что хотел учить арабский, а нормального приложения не было — сделал сам. Полтора года назад. С тех пор: пять продуктов, боты для 8+ бизнесов, $3 000+ заработал, два места на хакатонах. Встаю в 4 утра, намаз, пробежка, школа, потом код с 14:00. Сейчас строю Restok — следит за холодильником, понимает что заканчивается, заказывает через Kaspi. Подаю документы на программы ML и AI-инжиниринга.",
     numbers: [
-      { value: "1 200+", label: "ЭКЗЕМПЛЯРОВ КНИГИ «ЗОЖ»" },
+      { value: "1 200+", label: "ЭКЗЕМПЛЯРОВ КНИГИ О ЗДОРОВЬЕ" },
       { value: "$3 000+", label: "ОТ 8+ КЛИЕНТОВ" },
       { value: "80", label: "SHIPREADY В ЛИСТЕ ОЖИДАНИЯ" },
       { value: "120", label: "РЕГИСТРАЦИЙ SAFEBIZ KZ" },
