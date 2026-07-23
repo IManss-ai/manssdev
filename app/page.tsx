@@ -233,26 +233,29 @@ function CardHover({ children, className = "" }: { children: React.ReactNode; cl
 }
 
 const heroBodyBolds = [
-  "five products solo",
-  "SafeBiz KZ",
-  "2nd at EcoSolutions Hackathon 2026",
-  "$3,000",
-  "ShipReady",
+  "Six products",
+  "Rivalscope",
+  "AI battle cards",
+  "rivalscope.dev",
+  "Product Hunt",
+  "nFactorial Demo Day",
   "ML and AI Engineering programs",
 ];
 
 const lifeStoryBolds = [
-  "17",
   "Almaty",
-  "self-taught",
   "CodeVault",
-  "five products solo",
   "120 registrations",
   "2nd at EcoSolutions Hackathon 2026",
   "3rd at Spring Games 2026",
-  "$3,000 in four months",
-  "ShipReady",
-  "80 waitlist signups",
+  "$3,000+ in four months",
+  "Rivalscope",
+  "AI battle card",
+  "$1,280 in revenue",
+  "3,000 signups",
+  "365 active users",
+  "Product Hunt",
+  "nFactorial Demo Day 2026",
   "ML and AI Engineering programs",
 ];
 

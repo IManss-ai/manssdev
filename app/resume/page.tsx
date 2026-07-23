@@ -43,9 +43,10 @@ export default function Resume() {
         <p className="text-sm leading-relaxed">
           Indie developer, 2024-present. Almaty.
           <br />
-          Built and shipped five products solo. Paid client work for 8+ local
-          businesses delivering AI Telegram bots and landing pages. $3,000+
-          earned in four months.
+          Built and shipped six products solo. Rivalscope, a competitive
+          intelligence SaaS, is live with paying customers. Paid client work
+          for 8+ local businesses delivering AI Telegram bots and landing
+          pages. $3,000+ earned in four months.
         </p>
       </section>
 
@@ -55,6 +56,16 @@ export default function Resume() {
       <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">projects</p>
         <ul className="text-sm leading-relaxed space-y-4">
+          <li>
+            <span className="text-[#ededed]">Rivalscope</span>
+            <span className="text-[#6b6b6b]">
+              . Competitive intelligence SaaS: tracks competitor site changes,
+              mines their reviews for complaints, generates AI battle cards
+              with sales plays. Next.js, FastAPI, DeepSeek. $1,280 revenue in
+              2026, 3,000 signups, 365 active users. Launched on Product Hunt.
+              Pitched at nFactorial Demo Day 2026. Live at rivalscope.dev.
+            </span>
+          </li>
           <li>
             <span className="text-[#ededed]">ShipReady</span>
             <span className="text-[#6b6b6b]">
@@ -99,7 +110,8 @@ export default function Resume() {
       <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">stack</p>
         <p className="text-sm leading-relaxed text-[#6b6b6b]">
-          Next.js, TypeScript, Tailwind, Supabase, Railway, Vercel. Claude Code
+          Next.js, TypeScript, Tailwind, Python, FastAPI, Supabase, Railway,
+          Vercel. Claude Code
           daily workflow with custom CLAUDE.md and SKILL.md files. WSL2
           environment.
         </p>
