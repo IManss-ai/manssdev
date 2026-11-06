@@ -31,7 +31,7 @@ export default function Resume() {
       <section>
         <p className="text-xs text-zinc-500 lowercase mb-3">education</p>
         <p className="text-sm leading-relaxed">
-          Gymnasium 140, Almaty. 11th grade. Graduating 2026.
+          KBTU, Almaty. BSc Data Science and AI, freshman. Gymnasium 140, graduated 2026.
         </p>
       </section>
 
@@ -44,9 +44,9 @@ export default function Resume() {
           Indie developer, 2024-present. Almaty.
           <br />
           Built and shipped six products solo. Rivalscope, a competitive
-          intelligence SaaS, is live with paying customers. Paid client work
-          for 8+ local businesses delivering AI Telegram bots and landing
-          pages. $3,000+ earned in four months.
+          intelligence SaaS, sold for $20,000 after hitting $1K MRR.
+          Part-time full-stack software engineer at GSI Company since Aug
+          2026.
         </p>
       </section>
 
@@ -61,9 +61,9 @@ export default function Resume() {
             <span className="text-[#6b6b6b]">
               . Competitive intelligence SaaS: tracks competitor site changes,
               mines their reviews for complaints, generates AI battle cards
-              with sales plays. Next.js, FastAPI, DeepSeek. $1,280 revenue in
-              2026, 3,000 signups, 365 active users. Launched on Product Hunt.
-              Pitched at nFactorial Demo Day 2026. Live at rivalscope.dev.
+              with sales plays. Next.js, FastAPI, DeepSeek. $1K MRR, 578
+              signups, 365 active users. 3rd overall, 1st in revenue at
+              nFactorial Demo Day 2026. Sold for $20,000.
             </span>
           </li>
           <li>
@@ -101,6 +101,18 @@ export default function Resume() {
               . Code snippet manager. PHP, Supabase. 14 GitHub stars.
             </span>
           </li>
+        </ul>
+      </section>
+
+      <Separator />
+
+      {/* Recognition */}
+      <section>
+        <p className="text-xs text-zinc-500 lowercase mb-3">recognition</p>
+        <ul className="text-sm leading-relaxed space-y-2">
+          <li>ICAIC 2026, selected for the KBTU team. 1 of 6 students from Kazakhstan.</li>
+          <li>nFactorial Demo Day 2026, 3rd overall, 1st in revenue.</li>
+          <li>Alchemist Silkroad SVR 2026, finalist.</li>
         </ul>
       </section>
 
