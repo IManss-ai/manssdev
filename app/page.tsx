@@ -240,7 +240,6 @@ const heroBodyBolds = [
   "ICAIC 2026",
   "KBTU",
   "GSI Company",
-  "MBZUAI",
 ];
 
 const lifeStoryBolds = [
@@ -259,7 +258,6 @@ const lifeStoryBolds = [
   "KBTU",
   "GSI Company",
   "ICAIC 2026",
-  "MBZUAI",
 ];
 
 const scrawlVariants = {

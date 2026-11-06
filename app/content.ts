@@ -22,7 +22,7 @@ export const content = {
       "First project: an Arabic learning app I built because nothing good existed.",
       "First vibe-coded project: CodeVault, a snippet manager. 14 GitHub stars.",
       "Since then: six products solo, two hackathon placements, one exit.",
-      "Now: KBTU freshman, part-time full-stack engineer at GSI Company. Applied to MBZUAI for Fall 2027.",
+      "Now: KBTU freshman, part-time full-stack engineer at GSI Company.",
       "Stack: Next.js, TypeScript, FastAPI, Supabase, Claude Code.",
     ],
     experience_intro: "Six products shipped solo. One exit: Rivalscope, sold for $20,000. Every one started with a problem I actually had.",
@@ -50,7 +50,7 @@ export const content = {
     // Bento layout fields
     hero_intro: "Yo, I am",
     hero_callout: "Couldn't find the right app. Built it myself. Six times now.",
-    hero_body: "17. From Uralsk, now Almaty. Got into coding because I wanted to learn Arabic and nothing worked, so I built my own app. That was almost two years ago. Six products since. Built Rivalscope solo in 8 weeks at nFactorial: $1K MRR, 578 signups, 365 active users, 3rd overall and 1st in revenue at Demo Day, then sold it for $20,000. Selected for ICAIC 2026, 1 of 6 students from Kazakhstan. Now a KBTU freshman and part-time full-stack engineer at GSI Company. Applied to MBZUAI for Fall 2027. Up at 4am, pray, run, then code.",
+    hero_body: "17. From Uralsk, now Almaty. Got into coding because I wanted to learn Arabic and nothing worked, so I built my own app. That was almost two years ago. Six products since. Built Rivalscope solo in 8 weeks at nFactorial: $1K MRR, 578 signups, 365 active users, 3rd overall and 1st in revenue at Demo Day, then sold it for $20,000. Selected for ICAIC 2026, 1 of 6 students from Kazakhstan. Now a KBTU freshman and part-time full-stack engineer at GSI Company. Up at 4am, pray, run, then code.",
     numbers: [
       { value: "$20K", label: "RIVALSCOPE SALE" },
       { value: "578", label: "RIVALSCOPE SIGNUPS" },
@@ -71,7 +71,7 @@ export const content = {
     life_story_paragraphs: [
       "Grew up in Uralsk, a small post-Soviet city in the west of Kazakhstan. Nothing much there. Moved to Almaty at 13. Started coding almost two years ago. Not from a course, but because I wanted to learn Arabic and couldn't find an app that actually worked. So I built one. That's still how I pick projects: if I need something and it doesn't exist, I build it.",
       "My first vibe-coded project was CodeVault, a snippet manager that got 14 GitHub stars. After that: SafeBiz KZ for the 2026 Kazakhstan tax overhaul, 120 registrations. EcoAlmaty, 2nd at EcoSolutions Hackathon 2026. AzamatAI, 3rd at Spring Games 2026.",
-      "Then came Rivalscope: competitive intelligence for sales teams. It watched competitors' sites, mined their reviews for complaints, and turned every change into an AI battle card with ready-to-send plays. Built solo in 8 weeks at nFactorial: $1K MRR, 578 signups, 365 active users. 3rd overall and 1st in revenue at Demo Day, then sold for $20,000. These days: KBTU freshman, part-time full-stack engineer at GSI Company, selected for ICAIC 2026 in Singapore. Applied to MBZUAI for Fall 2027. Still up at 4am: prayer, run, then code.",
+      "Then came Rivalscope: competitive intelligence for sales teams. It watched competitors' sites, mined their reviews for complaints, and turned every change into an AI battle card with ready-to-send plays. Built solo in 8 weeks at nFactorial: $1K MRR, 578 signups, 365 active users. 3rd overall and 1st in revenue at Demo Day, then sold for $20,000. These days: KBTU freshman, part-time full-stack engineer at GSI Company, selected for ICAIC 2026 in Singapore. Still up at 4am: prayer, run, then code.",
     ],
     projects_v2: [
       { index: "01", name: "Rivalscope", status: "sold", description: "Competitive intelligence SaaS. Built solo in 8 weeks, $1K MRR, sold for $20,000. 3rd overall, 1st in revenue at nFactorial Demo Day.", href: "https://rivalscope.dev" },
@@ -116,7 +116,7 @@ export const content = {
       "Первый вайб-кодинг проект: CodeVault, менеджер сниппетов. 14 звёзд на GitHub.",
       "С тех пор: шесть продуктов соло, два места на хакатонах, одна продажа.",
       // TODO Mansur: переписать своими словами
-      "Сейчас: первокурсник КБТУ, парт-тайм фулстек-инженер в GSI Company. Подал в MBZUAI на осень 2027.",
+      "Сейчас: первокурсник КБТУ, парт-тайм фулстек-инженер в GSI Company.",
       "Стек: Next.js, TypeScript, FastAPI, Supabase, Claude Code.",
     ],
     experience_intro: "Шесть продуктов соло. Одна продажа: Rivalscope, продан за $20 000. Каждый начинался с проблемы, которая у меня реально была.",
@@ -145,7 +145,7 @@ export const content = {
     hero_intro: "Я —",
     hero_callout: "Не нашёл нужного приложения, сделал сам. Уже шесть раз.",
     // TODO Mansur: hero_body и life_story_paragraphs на русском — переписать своими словами.
-    // Русский текст абзацев не тронут: там Rivalscope ещё живой, нет ICAIC, КБТУ, GSI, MBZUAI.
+    // Русский текст абзацев не тронут: там Rivalscope ещё живой, нет ICAIC, КБТУ, GSI.
     hero_body: "17 лет. Из Уральска, теперь в Алматы. Начал кодить, потому что хотел учить арабский, а нормального приложения не было. Сделал сам. Это было почти два года назад. С тех пор: шесть продуктов, боты для 8+ бизнесов, $3 000+ заработал, два места на хакатонах. Сейчас полностью в Rivalscope: конкурентная разведка, которая следит за конкурентами и превращает каждый их ход в AI battle card. Живой продукт на rivalscope.dev с платящими клиентами, запуск на Product Hunt, питч на nFactorial Demo Day. Подъём в 4 утра, намаз, пробежка, потом код. Подаю документы на программы ML и AI-инжиниринга.",
     numbers: [
       { value: "$20K", label: "ПРОДАЖА RIVALSCOPE" },
